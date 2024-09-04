@@ -80,7 +80,7 @@ def max3(a: int, b: int, c: int) -> int:
 ```python
 def test_pythagore(a: int, b: int, c: int) -> bool:
     '''
-    Prend 3 entier en arguments et renvoie un booléen indiquand si
+    Prend 3 entiers en argument et renvoit un booléen indiquand si
     a² + b² = c²
     '''
     if c != max3(a, b, c):
@@ -89,3 +89,21 @@ def test_pythagore(a: int, b: int, c: int) -> bool:
         return a**2 + b**2 == c**2
 
 ```
+
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+END
