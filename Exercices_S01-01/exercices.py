@@ -71,9 +71,19 @@ def nb_jour_mois(a: int, m: int) -> int:
 
 # EX 14
 def nb_jours(j1: int, m1: int, a1: int, j2: int, m2: int, a2: int) -> int:
-    day1 = nb_jour_mois(a1, m1) - j1
-    day2 = nb_jour_mois(a2, m2) - j2
+    day1: int = nb_jour_mois(a1, m1) - j1 + 1
+    day2: int = nb_jour_mois(a2, m2) - j2 + 1
+    
+    annee1: int = nb_jour_annee(a1) - day1
+    annee2: int = nb_jour_annee(a2) - day2
+    annee3: int = 0
+    
+    for year in range(a1 , a2):
+        annee3 += nb_jour_annee(year)
+        
+    return annee1 + annee2 + annee3
 
 
 if __name__ == "__main__":
     testmod()
+    print(nb_jours(10, 11, 2007, 4, 9, 2024))
