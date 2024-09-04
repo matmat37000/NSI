@@ -33,18 +33,40 @@ def bissextile(a: int) -> bool:
         return False
 
 # EX 12
-def nb_jour_mois(a: int) -> int:
+def nb_jour_annee(a: int) -> int:
     '''
     Return number of day in the year passed in `a`
-    >>> nb_jour_mois(2024)
+    >>> nb_jour_annee(2024)
     366
-    >>> nb_jour_mois(300)
+    >>> nb_jour_annee(300)
     365
     '''
     if bissextile(a):
         return 366
     else:
         return 365
+    
+def nb_jour_mois(a: int, m: int) -> int:
+    '''
+    Return the number of day in the month (m) with the year passed in a
+    
+    >>> nb_jour_mois(2024, 2)
+    29
+    >>> nb_jour_mois(2023, 2)
+    28
+    >>> nb_jour_mois(2024, 1)
+    31
+    >>> nb_jour_mois(2024, 4)
+    30
+    '''
+    if m == 2 and bissextile(a):
+        return 29
+    elif m in [1, 3, 5, 7, 8, 10, 12]: # HACK: Hard coded value
+        return 31
+    elif m in [4, 6, 9, 11]: # HACK: Hard coded value
+        return 30
+    else:
+        return 28
 
 if __name__ == "__main__":
     testmod()
