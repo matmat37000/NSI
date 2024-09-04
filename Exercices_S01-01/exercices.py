@@ -45,7 +45,8 @@ def nb_jour_annee(a: int) -> int:
         return 366
     else:
         return 365
-    
+
+# EX 13
 def nb_jour_mois(a: int, m: int) -> int:
     '''
     Return the number of day in the month (m) with the year passed in a
@@ -67,6 +68,12 @@ def nb_jour_mois(a: int, m: int) -> int:
         return 30
     else:
         return 28
+
+# EX 14
+def nb_jours(j1: int, m1: int, a1: int, j2: int, m2: int, a2: int) -> int:
+    day1 = nb_jour_mois(a1, m1) - j1
+    day2 = nb_jour_mois(a2, m2) - j2
+
 
 if __name__ == "__main__":
     testmod()
