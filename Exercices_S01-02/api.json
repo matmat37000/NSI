@@ -1,0 +1,11 @@
+{"coord": {"lon": 0.6859, "lat": 47.4372
+    }, "weather": [
+        {"id": 804, "main": "Clouds", "description": "overcast clouds", "icon": "04d"
+        }
+    ], "base": "stations", "main": {"temp": 293.05, "feels_like": 292.74, "temp_min": 291.72, "temp_max": 294.14, "pressure": 1008, "humidity": 63, "sea_level": 1008, "grnd_level": 996
+    }, "visibility": 10000, "wind": {"speed": 0.89, "deg": 284, "gust": 2.24
+    }, "clouds": {"all": 100
+    }, "dt": 1725550960, "sys": {"type": 2, "id": 2077665, "country": "FR", "sunrise": 1725513713, "sunset": 1725561015
+    }, "timezone": 7200, "id": 2972190, 
+"name": "Arrondissement de Tours", "cod": 200
+}
