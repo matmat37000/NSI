@@ -80,6 +80,20 @@ def nb_jour_mois(a: int, m: int) -> int:
 def nb_jours(j1: int, m1: int, a1: int, j2: int, m2: int, a2: int, include_end_date: bool = False) -> int:
     '''
     Return days between j1/m1/a1 and j2/m2/a2
+    (on suppose que j1/m1/a1 < j2/m2/a2)
+    exemples:
+    >>> nb_jours(5,9,2020,5,9,2021)
+    365
+    >>> nb_jours(2,9,2020,10,6,2025)
+    1742
+    >>> nb_jours(2,9,2020,2,9,2020)
+    0
+    >>> nb_jours(8,9,2020,17,6,2025)
+    1743
+    >>> nb_jours(8,6,2020,17,9,2020)
+    101
+    >>> nb_jours(8,6,2020,17,6,2020)
+    9
     '''
     annee1: int = j1 + int(include_end_date) # nb_jour_annee(a1) -
     annee2: int = j2
