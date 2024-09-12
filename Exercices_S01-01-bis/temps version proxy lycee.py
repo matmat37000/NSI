@@ -11,7 +11,7 @@ def temps(API, *args):
     proxy = {"http":"proxy:8080"} # on ajoute une variable pour configurer le proxy du lycée
     r = requests.get(url) # cette fonction admet 2 arguments : url et proxies (optionnel)
     return r.json()
-temps_tours=temps('3f786cef8456dea0c16e0e251d224a8d',47.4371991,0.68595)
+temps_tours=temps('',47.4371991,0.68595)
 # print(temps_tours)
 print(f"Vous êtes à {temps_tours["name"]}, il fait {temps_tours['main']['temp']}°c. Le soleil se couche à {datetime.fromtimestamp(temps_tours['sys']['sunset'])}")
 
